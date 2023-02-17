@@ -444,27 +444,32 @@ p {
     justify-content: center;
 }
 
-.nav {
+.nav__footer {
     display: flex;
     justify-content: center;
     gap: 54px;
     align-items: center;
 }
 
-.nav a {
+.nav__footer a {
+    display: flex;
+    justify-content: flex-start;
     color: rgba(255, 255, 255, 0.6);
     font-weight: 300;
     text-decoration: none;
+    text-align: left;
+
 }
 
-.nav a:hover {
+.nav__footer a:hover {
     color: white;
     font-weight: 300;
     text-decoration: none;
+    text-align: left;
 }
 
 .line {
-    border-bottom: 1px solid rgba(176, 238, 0, 0.6);
+    border-bottom: 1px solid rgba(176, 238, 0, 0.4);
 }
 
 .connect {
@@ -572,6 +577,7 @@ p {
         border-radius: 20px;
         margin-bottom: 20px;
     }
+
     .bottombar__mob {
         display: none;
     }
@@ -619,7 +625,6 @@ p {
         align-items: flex-start;
         font-size: 24px;
         width: 0;
-        height: 100px;
         left: 0;
         top: 0;
         bottom: 0;
@@ -647,10 +652,12 @@ p {
         margin-left: 20px;
         margin-top: 54px;
         gap: 24px;
+        margin-top: 100px;
     }
 
     .nav a {
         color: rgba(255, 255, 255, 1);
+        text-align: left;
     }
 
     .burger {
@@ -663,6 +670,7 @@ p {
         cursor: pointer;
         z-index: 400;
     }
+
     .bottombar__mob {
         display: none;
     }
@@ -722,21 +730,15 @@ p {
         width: 150px;
         border: 1px solid #F3F3F3;
         border-radius: 20px;
-
-    }
-
-    .nav {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        gap: 16px;
-        align-items: center;
-        margin-top: 0;
     }
 
     .bottombar__mob {
         display: none;
     }
+.nav__footer {
+    gap: 16px;
+}
+
 
 }
 
@@ -809,16 +811,14 @@ p {
         padding: 60px 0;
     }
 
-    .nav {
-        display: flex;
-        justify-content: center;
-        gap: 16px;
-        align-items: center;
-        margin-top: 0;
-    }
-
     .bottombar__mob {
         display: none;
+    }
+
+    .nav__footer {
+       flex-direction: column;
+       gap: 16px;
+       padding: 16px 0;
     }
 }
 
@@ -865,15 +865,23 @@ p {
         border-radius: 10px;
         margin-bottom: 8px;
     }
+
     .bottombar__mob {
         display: none;
     }
 }
 
 @media (max-width: 720px) {
+
     .container {
         padding: 0 10px;
+        
     }
+    #main__page {
+    height: calc(100vh - 52px);
+    padding-bottom: 0;
+
+}
 
     #main__page,
     #services,
@@ -889,10 +897,6 @@ p {
     h2 {
         font-size: 28px;
         line-height: 120%;
-    }
-
-    .nav {
-        margin-top: 100px;
     }
 
     .pills span {
@@ -931,6 +935,7 @@ p {
 
     .hero2 h2 {
         text-align: right;
+        margin-bottom: 20px;
     }
 
     .form1 {
@@ -944,7 +949,7 @@ p {
         text-align: center;
         border-radius: 10px;
         border: none;
-        width: 224px;
+        width: 100%;
         height: 48px;
 
     }
@@ -953,7 +958,7 @@ p {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        width: 108px;
+        width: 50%;
         height: 48px;
         background: rgba(189, 201, 224, 0.7);
         border-radius: 10px;
@@ -961,16 +966,17 @@ p {
 
     .bottombar__mob {
         display: flex;
+        justify-content: space-between;
         align-items: center;
-        justify-content: space-between;  
-        margin-top: 30px;
-      }
+        gap: 10px;
 
-      h4 {
+    }
+
+    h4 {
         font-size: 16px;
-      }
+    }
 
-      .card__services {
+    .card__services {
         padding: 30px 20px;
     }
 
@@ -985,16 +991,13 @@ p {
     .second__img {
         display: none;
     }
+
     .partners__logo img {
         width: 166px;
         border-radius: 20px;
         margin-bottom: 20px;
     }
+    .connect {
+        width: 100%;
+    }
 }
-
-
-
-
-
-
-
