@@ -80,9 +80,6 @@ body {
 }
 
 #main__page {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     position: relative;
     background-image: url(img/bg.png);
     background-repeat: no-repeat;
@@ -90,7 +87,14 @@ body {
     background-size: cover;
     height: calc(100vh - 81px);
     color: white;
-    margin: 0 20px
+    margin: 0 20px;
+}
+
+.first__screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
 }
 
 
@@ -129,7 +133,7 @@ h2 {
     max-width: 690px;
     text-align: left;
     margin: 0;
-    line-height: 76px;
+    line-height: 100%;
 }
 
 .strong {
@@ -184,7 +188,7 @@ h4 {
     background: rgba(189, 201, 224, 0.7);
     border-radius: 20px;
     padding: 0 40px;
-    margin-top: 30px;
+    margin-bottom: 64px;
 
 
 }
@@ -878,9 +882,8 @@ p {
         
     }
     #main__page {
-    height: calc(100vh - 52px);
-    padding-bottom: 0;
-
+        height: calc(100vh - 52px);
+        background-image: url(img/bgxs.png);
 }
 
     #main__page,
@@ -897,12 +900,16 @@ p {
     h2 {
         font-size: 28px;
         line-height: 120%;
+        margin-top: 10px;
+    }
+
+    .h3__card {
+        padding-top: 10px;
     }
 
     .pills span {
         margin: 0 4px 4px 0;
         font-size: 14px;
-        font-weight: 200;
         padding: 8px;
     }
 
@@ -930,12 +937,11 @@ p {
     .hero2 {
         flex-direction: column;
         justify-content: space-around;
-        margin-top: 15px;
     }
 
     .hero2 h2 {
         text-align: right;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
 
     .form1 {
@@ -969,28 +975,30 @@ p {
         justify-content: space-between;
         align-items: center;
         gap: 10px;
+        margin-bottom: 10px;
 
     }
 
     h4 {
-        font-size: 16px;
+        font-size: 12px;
+        line-height: 120%;
     }
 
     .card__services {
-        padding: 30px 20px;
+        padding: 10px 20px;
     }
 
-    .m-b-30 {
-        margin-bottom: 4px;
+    .m-b-30{
+        margin-bottom: 5px;
     }
 
     .m-b-54 {
-        margin-bottom: 15px;
+        margin-bottom: 30px;
     }
 
-    .second__img {
-        display: none;
-    }
+     .image__about {
+        border-radius: 10px;
+    } 
 
     .partners__logo img {
         width: 166px;
@@ -1000,4 +1008,13 @@ p {
     .connect {
         width: 100%;
     }
+
+    #about {
+        background: radial-gradient(28.31% 14.8% at 64.17% 77.64%, rgba(19, 103, 241, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(20% 7.31% at 70% 12.03%, rgba(183, 255, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+    }
+    .mobile__header__about {
+        text-indent: 60px;
+        text-align: center;
+    }
+ 
 }
