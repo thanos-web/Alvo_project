@@ -85,7 +85,7 @@ body {
     background-repeat: no-repeat;
     border-radius: 20px;
     background-size: cover;
-    height: calc(100vh - 81px);
+    min-height: calc(100vh - 81px);
     color: white;
     margin: 0 20px;
 }
@@ -404,14 +404,14 @@ p {
     grid-column-gap: 30px;
     grid-row-gap: 30px;
 }
-.box {
-    display: block;
-}
 
 .partners__logo img {
     display: block;
     border: 1px solid #F3F3F3;
     border-radius: 20px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 
 }
 
@@ -883,7 +883,7 @@ p {
         
     }
     #main__page {
-        height: calc(100vh - 52px);
+        min-height: calc(100vh - 52px);
         background-image: url(img/bgxs.png);
 }
 
@@ -981,7 +981,7 @@ p {
     }
 
     h4 {
-        font-size: 12px;
+        font-size: 14px;
         line-height: 120%;
     }
 
