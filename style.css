@@ -13,6 +13,9 @@ body {
     align-items: center;
     margin: 10px 20px 10px 20px;
 }
+.popup {
+    display: none;
+}
 
 .header__before1024 {
     display: none;
@@ -741,9 +744,10 @@ p {
     .bottombar__mob {
         display: none;
     }
-.nav__footer {
-    gap: 16px;
-}
+
+    .nav__footer {
+        gap: 16px;
+    }
 
 
 }
@@ -822,9 +826,9 @@ p {
     }
 
     .nav__footer {
-       flex-direction: column;
-       gap: 16px;
-       padding: 16px 0;
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px 0;
     }
 }
 
@@ -881,15 +885,18 @@ p {
 
     .container {
         padding: 0 10px;
-        
+
     }
+
     #main__page {
         height: calc(100vh - 52px);
         min-height: calc(100vh - 52px);
-}
-.first__screen {
-    height: 100%;
-}
+        background-image: url(img/bgxs.png);
+    }
+
+    .first__screen {
+        height: 100%;
+    }
 
     #main__page,
     #services,
@@ -989,7 +996,7 @@ p {
         padding: 24px 20px;
     }
 
-    .m-b-30{
+    .m-b-30 {
         margin-bottom: 5px;
     }
 
@@ -997,9 +1004,9 @@ p {
         margin-bottom: 30px;
     }
 
-     .image__about {
+    .image__about {
         border-radius: 10px;
-    } 
+    }
 
 
     .partners__logo {
@@ -1007,16 +1014,90 @@ p {
         grid-column-gap: 8px;
         grid-row-gap: 8px;
     }
+
     .connect {
         width: 100%;
     }
 
     #about {
-        background: radial-gradient(28.31% 14.8% at 64.17% 77.64%, rgba(19, 103, 241, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, radial-gradient(20% 7.31% at 70% 12.03%, rgba(183, 255, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */, #FFFFFF;
+        background: radial-gradient(28.31% 14.8% at 64.17% 77.64%, rgba(19, 103, 241, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+            , radial-gradient(20% 7.31% at 70% 12.03%, rgba(183, 255, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+            /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+            , #FFFFFF;
     }
+
     .mobile__header__about {
         text-indent: 60px;
         text-align: center;
     }
- 
+    .card-body {
+        min-height: 148px;
+    }
+    .card {
+        margin-left: 10px;
+        border: none;
+        border-radius: 20px;
+        width: 100%;
+    }
+
+    .hidden{
+        display: flex;
+        transition: 2s ease-in-out 1s;
+        }
+
+    .popup {
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-end;
+        padding: 30px 20px;
+        border-radius: 20px;
+        background: rgba(149, 160, 178, 0.9);
+        z-index: 300;
+        overflow: hidden;
+        left: 0;
+        top: calc(100vh/3);
+        position: fixed;
+
+    }
+    .popup__form{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: 20px;
+    }
+
+    .popup__form input {
+        border-radius: 10px;
+        border: none;
+        font-size: 16px;
+        padding: 16px 22px;
+        width: 100%;
+    }
+    .closeicon__popupform{
+        cursor: pointer;
+        z-index: 400;
+        margin-top: 0;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    /* .dark__layer {
+        display: flex;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 250;
+        overflow: hidden;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100vh;
+        position: fixed;
+        transition: 2s ease-in-out 1s; */
+
+    /* } */
+
+
 }
