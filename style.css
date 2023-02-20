@@ -891,7 +891,7 @@ p {
     #main__page {
         height: calc(100vh - 52px);
         min-height: calc(100vh - 52px);
-        background-image: url(img/bgxs.png);
+        background-image: url(img/bgxs1.png);
     }
 
     .first__screen {
@@ -937,7 +937,7 @@ p {
     }
 
     .flash {
-        width: 60px;
+        width: 80px;
         margin-right: 0px;
 
     }
