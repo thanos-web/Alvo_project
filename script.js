@@ -6,8 +6,11 @@ closeIcon.addEventListener('click' , () => menuBefore1024.classList.remove("show
 
 const popupform = document.querySelector(".popup");
 const buttonwriteus = document.querySelector(".btn__mob");
-const closeiconpopupform = document.querySelector(".closeicon__popupform")
+const closeiconpopupform = document.querySelector(".closeicon__popupform");
+const overlay = document.querySelector(".overlay");
+buttonwriteus.addEventListener('click' , () => overlay.classList.toggle("hidden"));
 buttonwriteus.addEventListener('click' , () => popupform.classList.toggle("hidden"));
 closeiconpopupform.addEventListener('click' ,() => popupform.classList.remove("hidden"));
+closeiconpopupform.addEventListener('click' ,() => overlay.classList.remove("hidden"));
 
 
