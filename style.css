@@ -801,12 +801,12 @@ p {
         position: fixed;
         z-index: 200;
         overflow: hidden;
-        transition: 0.8s ease-in-out 0.5s;
+        /* transition: 0.2s ease-in-out 0.1s; */
     }
 
     .showMenu {
         width: 300px;
-        transition: 0.8s ease-in-out 0.5s;
+        transition: 0.4s ease-in-out 0.2s;
 
     }
 
