@@ -1,5 +1,5 @@
 html {
-    scroll-behavior: smooth;
+    overlay scroll-behavior: smooth;
 
 }
 
@@ -13,9 +13,11 @@ body {
     align-items: center;
     margin: 10px 20px 10px 20px;
 }
+
 .popup {
     display: none;
 }
+
 .overlay {
     display: none;
 }
@@ -31,6 +33,12 @@ body {
 .m-b-54 {
     margin-bottom: 54px;
     ;
+}
+.m-r-8{
+margin-right: 8px;
+}
+.m-t-54 {
+    margin-top: 54px;
 }
 
 .header__logo {
@@ -60,13 +68,13 @@ body {
     display: none;
 }
 
-.lang__and__messengers {
+.lang__and__phone {
     display: flex;
     flex-direction: row;
     gap: 40px;
 }
 
-.lang__and__messengers a {
+.lang__and__phone a {
     text-decoration: none;
     color: #5D5D5D;
     text-transform: uppercase;
@@ -74,16 +82,10 @@ body {
 
 }
 
-.lang__and__messengers a:hover {
+.lang__and__phone a:hover {
     color: black;
 }
 
-
-.messengers {
-    display: flex;
-    gap: 24px;
-
-}
 
 #main__page {
     position: relative;
@@ -117,6 +119,32 @@ body {
     justify-content: flex-end;
     margin-top: 54px;
 }
+
+.messengers {
+    display: flex;
+    align-items:center;
+    justify-content: flex-end;
+    margin-bottom: 100px;
+    gap: 10px;
+   
+}
+.messenger {
+    display: flex;
+    width: fit-content;
+    height: 60px;
+    align-items: center;
+    border: 0.5px solid rgba(189, 201, 224, 0.7);
+    background: rgba(189, 201, 224, 0.1);
+    border-radius: 10px;
+    padding: 8px 16px;
+}
+.messenger p {
+    margin-bottom: 0;
+    margin-right: 8px;
+    font-weight: 300;
+}
+
+
 
 h1 {
     width: 100%;
@@ -158,8 +186,6 @@ h4 {
     color: #5D5D5D;
     ;
 }
-
-
 
 .pills {
     display: flex;
@@ -300,6 +326,113 @@ h4 {
 
 }
 
+#products {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    background-color: #95A0B2;
+    border-radius: 20px;
+    color: #ffffff;
+    margin: 16px 20px;
+    padding: 65px 0;
+}
+
+.product__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    align-content: flex-start;
+}
+
+.product__list img {
+    display: block;
+    border-radius: 10px 10px 0 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-bottom: #FFFFFF solid 1px;
+}
+
+.product__name {
+    padding: 8px 16px;
+    color: #5D5D5D;
+    height: 85px;
+}
+
+.product__item {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    background: radial-gradient(30.61% 26.38% at 19.39% 86.5%, rgba(19, 103, 241, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , radial-gradient(31.38% 24.94% at 86.99% 69.77%, rgba(183, 255, 0, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%)
+        /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */
+        , #FFFFFF;
+
+}
+
+.product__item:hover {
+    border: 1px solid #B0EE00;
+    border-radius: 10px;
+    cursor: pointer;
+
+}
+
+.lime {
+    color: #B0EE00;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.popupImage {
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 50px 50px;
+    z-index: 300;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    position: relative;
+    max-width: 1000px;
+}
+
+.popupImage img {
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.closeicon__popupimg {
+    cursor: pointer;
+    z-index: 400;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.overlayImage {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1;
+    overflow: hidden;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+}
+
 h3 {
     margin: 0;
     padding: 0;
@@ -407,9 +540,9 @@ p {
 
 .partners__logo {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 30px;
+    align-content: flex-start;
 }
 
 .partners__logo img {
@@ -427,42 +560,50 @@ p {
     border-radius: 20px;
 }
 
-#contacts {
-    background-image: url(img/map.png);
-    background-repeat: no-repeat;
-    height: 80vh;
-    border-radius: 20px;
-    background-size: cover;
-    margin: 0 20px;
-    padding: 130px 0;
-}
 
-.contact__info {
-    background: rgba(255, 255, 255, 0.5);
-    backdrop-filter: blur(2px);
-    border-radius: 30px;
-    padding: 40px;
-}
 
 #footer {
-
+    display: flex;
     border-radius: 20px 20px 0 0;
     background-color: #000000;
     margin: 0 20px;
-    padding: 130px 0;
+    padding: 60px 0;
     margin-top: 16px;
+    flex-direction: column;
 }
 
-.messengers {
+.header__logo_footer {
+    border-radius: 5px;
+    width: 120px;
+}
+
+.footerContainer {
+    display: flex;
+    justify-content: space-between;
+    color: #FFFFFF;
+    align-items: flex-start;
+
+}
+
+.contact__link a {
+    text-decoration: none;
+    color: #aeee00b4;
+}
+.contact__link a:hover{
+    color: #B0EE00;
+}
+
+.messengers__footer {
     display: flex;
     justify-content: center;
+    gap: 24px
 }
 
 .nav__footer {
     display: flex;
     justify-content: center;
-    gap: 54px;
-    align-items: center;
+    flex-direction: column;
+    gap: 8px;
 }
 
 .nav__footer a {
@@ -482,9 +623,17 @@ p {
     text-align: left;
 }
 
-.line {
-    border-bottom: 1px solid rgba(176, 238, 0, 0.4);
+.contact__info p {
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 300;
 }
+
+/* .line {
+
+    width: 100%;
+    height: 1px;
+    background: rgba(176, 238, 0, 0.4);
+} */
 
 .connect {
     font-family: 'Rubik';
@@ -503,7 +652,8 @@ p {
     transition: background-color 0.5s;
 }
 
-.messengers svg path {
+.messengers__footer svg path
+ {
     fill: #B0EE00;
 }
 
@@ -565,6 +715,7 @@ p {
 }
 
 
+
 @media (min-width: 1200px) and (max-width: 1440px) {
     .flash {
         margin-right: 60px;
@@ -594,6 +745,8 @@ p {
     .bottombar__mob {
         display: none;
     }
+
+
 
 }
 
@@ -673,20 +826,24 @@ p {
         text-align: left;
     }
 
-    .burger {
-        cursor: pointer;
-    }
+    .burger svg,
+    {
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+}
 
-    .closeicon {
-        margin-top: 10px;
-        margin-right: 20px;
-        cursor: pointer;
-        z-index: 400;
-    }
 
-    .bottombar__mob {
-        display: none;
-    }
+.closeicon {
+    margin-top: 10px;
+    margin-right: 20px;
+    cursor: pointer;
+    z-index: 400;
+}
+
+.bottombar__mob {
+    display: none;
+}
 }
 
 @media (min-width: 996px) and (max-width: 1200px) {
@@ -808,7 +965,8 @@ p {
         margin-top: 15px;
     }
 
-    .partners__logo img {
+    .partners__logo img,
+    .product__list {
         grid-column-gap: 10px;
         grid-row-gap: 10px;
 
@@ -820,7 +978,8 @@ p {
     #machines,
     #partners,
     #contacts,
-    #footer {
+    #footer,
+    #products {
         padding: 60px 0;
     }
 
@@ -852,12 +1011,14 @@ p {
     #machines,
     #partners,
     #contacts,
-    #footer {
+    #footer,
+    #products {
         padding: 30px 0;
     }
 
     .hero1,
-    .hero2 {
+    .hero2,
+    .products__header {
         margin-top: 15px;
     }
 
@@ -907,7 +1068,8 @@ p {
     #machines,
     #partners,
     #contacts,
-    #footer {
+    #footer,
+    #products {
         margin: 8px 0;
     }
 
@@ -955,12 +1117,12 @@ p {
         margin-bottom: 10px;
     }
 
-    .form1 {
+    /* .form1 {
         display: none;
 
-    }
+    } */
 
-    .btn__mob {
+    /* .btn__mob {
         color: #000000;
         background: #B0EE00;
         text-align: center;
@@ -969,9 +1131,9 @@ p {
         width: 100%;
         height: 48px;
 
-    }
+    } */
 
-    .messengers__mob {
+    /* .messengers__mob {
         display: flex;
         align-items: center;
         justify-content: space-around;
@@ -979,16 +1141,16 @@ p {
         height: 48px;
         background: rgba(189, 201, 224, 0.7);
         border-radius: 10px;
-    }
+    } */
 
-    .bottombar__mob {
+    /* .bottombar__mob {
         display: flex;
         justify-content: space-between;
         align-items: center;
         gap: 10px;
         margin-bottom: 10px;
 
-    }
+    } */
 
     h4 {
         font-size: 14px;
@@ -1011,13 +1173,6 @@ p {
         border-radius: 10px;
     }
 
-
-    .partners__logo {
-        grid-template-columns: 1fr 1fr;
-        grid-column-gap: 8px;
-        grid-row-gap: 8px;
-    }
-
     .connect {
         width: 100%;
     }
@@ -1034,9 +1189,11 @@ p {
         text-indent: 60px;
         text-align: center;
     }
+
     .card-body {
         min-height: 148px;
     }
+
     .card {
         margin-left: 10px;
         border: none;
@@ -1044,10 +1201,20 @@ p {
         width: 100%;
     }
 
-    .hidden{
+    .partners__logo,
+    .product__list {
+        grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+        gap: 10px;
+    }
+
+    .product__name {
+        padding: 8px 10px;
+    }
+
+    .show {
         display: flex;
         transition: 2s ease-in-out 1s;
-        }
+    }
 
     .popup {
         flex-direction: column;
@@ -1063,7 +1230,8 @@ p {
         position: fixed;
 
     }
-    .popup__form{
+
+    .popup__form {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -1079,12 +1247,17 @@ p {
         padding: 16px 22px;
         width: 100%;
     }
-    .closeicon__popupform{
+
+    .closeicon__popupform {
         cursor: pointer;
         z-index: 400;
         margin-top: 0;
         margin-right: 0;
         margin-bottom: 20px;
+    }
+
+    .hidden {
+        display: flex;
     }
 
     .overlay {
@@ -1097,8 +1270,38 @@ p {
         width: 100%;
         height: 100vh;
         position: fixed;
-        
-     }
 
+    }
 
+    .footerContainer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font-size: 14px;
+
+    }
+
+    .contact__info,
+    .messengers {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .header__logo_footer {
+        display: none;
+    }
+
+    .nav__footer {
+        gap: 8px;
+        align-items: center;
+    }
+    .contact__link a{
+        color: #B0EE00;
+    }
+
+    .messenger p {
+     font-size: 14px;
+     margin-right: 0;
+    }
 }
