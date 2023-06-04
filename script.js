@@ -1,9 +1,20 @@
 const burger = document.querySelector(".burger");
 const menuBefore1024 = document.querySelector(".menu__before1024");
 const closeIcon = document.querySelector(".closeicon");
-burger.addEventListener('click', () => menuBefore1024.classList.toggle("showMenu"));
-closeIcon.addEventListener('click', () => menuBefore1024.classList.remove("showMenu"), () => popupform.classList.remove("hidden"));
 
+burger.addEventListener('click', () => menuBefore1024.classList.toggle("showMenu"));
+closeIcon.addEventListener('click', () => menuBefore1024.classList.remove("showMenu"));
+
+
+const mobileMenu = document.querySelectorAll('.nav a');
+console.log(mobileMenu)
+mobileMenu.forEach(link => {
+    link.addEventListener('click',()=>{
+        menuBefore1024.classList.remove("showMenu")
+    })
+}
+
+)
 // const popupform = document.querySelector(".popup");
 // const buttonMob = document.querySelector(".btn__mob");
 // const closeiconpopupform = document.querySelector(".closeicon__popupform");
